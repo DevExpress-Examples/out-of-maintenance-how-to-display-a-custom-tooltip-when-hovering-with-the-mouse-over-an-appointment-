@@ -1,0 +1,28 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>How to display a custom ToolTip when hovering with the mouse over an appointment - Developer Express Example</title>
+<style>
+html, body, form 
+{
+	font-family: Tahoma, Arial, Verdana;
+    font-size: small;
+    color: #303440;
+}
+h1 {
+	font-size: 125%;
+	font-weight: normal;
+	color: Black;
+	letter-spacing: 101%;
+}
+</style>
+</head>
+<body>
+<h1>Developer Express Example<br />How to display a custom ToolTip when hovering with the mouse over an appointment</h1>
+<p>This example illustrates how to customize an appointment ToolTip (by default, it invokes an appointment context menu). To do this, you should override a CustomAppointmentTooltip template of the ASPxScheduler (see Templates (http://documentation.devexpress.com/#AspNet/CustomDocument4550)).
+Basically, you can use the ASPxClientScheduler.RefreshClientAppointmentProperties Method (http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_RefreshClientAppointmentPropertiestopic) to obtain standard and custom appointment fields (see http://www.devexpress.com/scid=Q277355). However, in v2010 vol 2 we have implemented a simpler and more flexible mechanism for preparing arbitrary values (not only standard and custom field values) for a client-side appointment object: http://www.devexpress.com/scid=S33646. In previous versions, a similar functionality can be achieved only when using custom JSProperties (see http://www.devexpress.com/scid=Q276425).
+Also, there is a CalculatePosition() method in the ASPxClientToolTipBase class. You can override it in the inheritor (custom tooltip) to provide custom coordinates as shown in the http://www.devexpress.com/scid=Q273610 thread.</p>
+<p>You can find sample updates and versions for different programming languages here:<br /><a href="http://www.devexpress.com/example=E3224">http://www.devexpress.com/example=E3224</a>.</p>
+</body>
+</html>
