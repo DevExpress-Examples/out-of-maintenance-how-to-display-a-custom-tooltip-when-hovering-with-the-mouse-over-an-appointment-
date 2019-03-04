@@ -43,7 +43,7 @@
             </dxe:ASPxImage>
         </td>
         <td style="width:100%;">
-            <dxe:ASPxLabel ID="lblConfirm" runat="server" Text='<%#"Do you want to delete all occurrences of the recurring appointment """ & CType(Container, DevExpress.Web.ASPxScheduler.RecurrentAppointmentDeleteFormTemplateContainer).Appointment.Subject & """, or just this one?"%>'/>
+			<dxe:ASPxLabel ID="lblConfirm" runat="server" Text='<%#"Do you want to delete all occurrences of the recurring appointment """ & CType(Container, DevExpress.Web.ASPxScheduler.RecurrentAppointmentDeleteFormTemplateContainer).Appointment.Subject & """, or just this one?"%>'/>
         </td>
     </tr>
     <tr>

@@ -36,41 +36,41 @@ Imports DevExpress.Web
 Imports DevExpress.Web.ASPxScheduler
 
 Partial Public Class GotoDateForm
-    Inherits SchedulerFormControl
+	Inherits SchedulerFormControl
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-        'PrepareChildControls();
-        edtDate.Focus()
-    End Sub
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+		'PrepareChildControls();
+		edtDate.Focus()
+	End Sub
 
-    Public Overrides Sub DataBind()
-        MyBase.DataBind()
-        Dim container As GotoDateFormTemplateContainer = CType(Parent, GotoDateFormTemplateContainer)
-        cbView.Value = container.ActiveViewType.ToString()
+	Public Overrides Sub DataBind()
+		MyBase.DataBind()
+		Dim container As GotoDateFormTemplateContainer = CType(Parent, GotoDateFormTemplateContainer)
+		cbView.Value = container.ActiveViewType.ToString()
 
-        btnOk.ClientSideEvents.Click = container.ApplyHandler
-        btnCancel.ClientSideEvents.Click = container.CancelHandler
+		btnOk.ClientSideEvents.Click = container.ApplyHandler
+		btnCancel.ClientSideEvents.Click = container.CancelHandler
 
-        Dim scheduler As ASPxScheduler = container.Control
-        Dim actualSchedulerInstanceName As String = scheduler.ClientInstanceName
-        If String.IsNullOrEmpty(actualSchedulerInstanceName) Then
-            actualSchedulerInstanceName = scheduler.ClientID
-        End If
-        edtDate.ClientSideEvents.LostFocus = String.Format("function(s,e) {{" & ControlChars.CrLf & _
-"                var date = s.GetDate();" & ControlChars.CrLf & _
-"                if (date == null || date == false) {{" & ControlChars.CrLf & _
-"                    var selectionInterval = {0}.GetSelectedInterval();" & ControlChars.CrLf & _
-"                    var startDate = selectionInterval.GetStart();" & ControlChars.CrLf & _
-"                    s.SetDate(startDate);" & ControlChars.CrLf & _
-"                }}" & ControlChars.CrLf & _
-"            }}", actualSchedulerInstanceName)
-    End Sub
-    Protected Overrides Function GetChildEditors() As ASPxEditBase()
-        Dim edits() As ASPxEditBase = { lblDate, edtDate, lblView, cbView }
-        Return edits
-    End Function
-    Protected Overrides Function GetChildButtons() As ASPxButton()
-        Dim buttons() As ASPxButton = { btnOk, btnCancel }
-        Return buttons
-    End Function
+		Dim scheduler As ASPxScheduler = container.Control
+		Dim actualSchedulerInstanceName As String = scheduler.ClientInstanceName
+		If String.IsNullOrEmpty(actualSchedulerInstanceName) Then
+			actualSchedulerInstanceName = scheduler.ClientID
+		End If
+		edtDate.ClientSideEvents.LostFocus = String.Format("function(s,e) {{
+                var date = s.GetDate();
+                if (date == null || date == false) {{
+                    var selectionInterval = {0}.GetSelectedInterval();
+                    var startDate = selectionInterval.GetStart();
+                    s.SetDate(startDate);
+                }}
+            }}", actualSchedulerInstanceName)
+	End Sub
+	Protected Overrides Function GetChildEditors() As ASPxEditBase()
+		Dim edits() As ASPxEditBase = { lblDate, edtDate, lblView, cbView }
+		Return edits
+	End Function
+	Protected Overrides Function GetChildButtons() As ASPxButton()
+		Dim buttons() As ASPxButton = { btnOk, btnCancel }
+		Return buttons
+	End Function
 End Class

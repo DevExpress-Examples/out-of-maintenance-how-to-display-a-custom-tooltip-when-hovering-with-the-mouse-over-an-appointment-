@@ -53,7 +53,7 @@
 <table cellpadding="2"; cellspacing="0" style="width:100%; height:100%">
     <tr>
         <td style="width:100%" >
-            <dxe:ASPxMemo ClientInstanceName="_dx" ID="memSubject" runat="server" Width="100%" Rows="5" Text='<%#CType(Container, AppointmentInplaceEditorTemplateContainer).Appointment.Subject%>'>
+			<dxe:ASPxMemo ClientInstanceName="_dx" ID="memSubject" runat="server" Width="100%" Rows="5" Text='<%#CType(Container, AppointmentInplaceEditorTemplateContainer).Appointment.Subject%>'>
             </dxe:ASPxMemo>
         </td>
         <td valign="top" >

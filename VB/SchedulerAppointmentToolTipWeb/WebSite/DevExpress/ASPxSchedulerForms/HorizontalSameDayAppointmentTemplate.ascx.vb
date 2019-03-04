@@ -37,47 +37,47 @@ Imports DevExpress.Web.ASPxScheduler
 Imports DevExpress.Web.ASPxScheduler.Drawing
 
 Partial Public Class HorizontalSameDayAppointmentTemplate
-    Inherits System.Web.UI.UserControl
+	Inherits System.Web.UI.UserControl
 
-    Private ReadOnly Property Container() As HorizontalAppointmentTemplateContainer
-        Get
-            Return CType(Parent, HorizontalAppointmentTemplateContainer)
-        End Get
-    End Property
-    Private ReadOnly Property Items() As HorizontalAppointmentTemplateItems
-        Get
-            Return Container.Items
-        End Get
-    End Property
+	Private ReadOnly Property Container() As HorizontalAppointmentTemplateContainer
+		Get
+			Return CType(Parent, HorizontalAppointmentTemplateContainer)
+		End Get
+	End Property
+	Private ReadOnly Property Items() As HorizontalAppointmentTemplateItems
+		Get
+			Return Container.Items
+		End Get
+	End Property
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-        appointmentDiv.Style.Value = Items.AppointmentStyle.GetStyleAttributes(Page).Value
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+		appointmentDiv.Style.Value = Items.AppointmentStyle.GetStyleAttributes(Page).Value
 
-        lblStartTime.ControlStyle.MergeWith(Items.StartTimeText.Style)
-        lblEndTime.ControlStyle.MergeWith(Items.EndTimeText.Style)
-        lblTitle.ControlStyle.MergeWith(Items.Title.Style)
+		lblStartTime.ControlStyle.MergeWith(Items.StartTimeText.Style)
+		lblEndTime.ControlStyle.MergeWith(Items.EndTimeText.Style)
+		lblTitle.ControlStyle.MergeWith(Items.Title.Style)
 
-        LayoutAppointmentImages()
+		LayoutAppointmentImages()
 
-        statusContainer.Controls.Add(Container.Items.StatusControl)
-        startTimeClockContainer.Controls.Add(Container.Items.StartTimeClock)
-        endTimeClockContainer.Controls.Add(Container.Items.EndTimeClock)
-    End Sub
-    Private Sub LayoutAppointmentImages()
-        Dim count As Integer = Items.Images.Count
-        Dim row As New HtmlTableRow()
-        row.Cells.Add(New HtmlTableCell())
-        For i As Integer = 0 To count - 1
-            Dim cell As New HtmlTableCell()
-            AddImage(cell, Items.Images(i))
-            row.Cells.Add(cell)
-        Next i
-        imageContainer.Rows.Add(row)
-    End Sub
-    Private Sub AddImage(ByVal targetCell As HtmlTableCell, ByVal imageItem As AppointmentImageItem)
-        Dim image As New Image()
-        imageItem.ImageProperties.AssignToControl(image, False)
-        targetCell.Controls.Add(image)
-    End Sub
+		statusContainer.Controls.Add(Container.Items.StatusControl)
+		startTimeClockContainer.Controls.Add(Container.Items.StartTimeClock)
+		endTimeClockContainer.Controls.Add(Container.Items.EndTimeClock)
+	End Sub
+	Private Sub LayoutAppointmentImages()
+		Dim count As Integer = Items.Images.Count
+		Dim row As New HtmlTableRow()
+		row.Cells.Add(New HtmlTableCell())
+		For i As Integer = 0 To count - 1
+			Dim cell As New HtmlTableCell()
+			AddImage(cell, Items.Images(i))
+			row.Cells.Add(cell)
+		Next i
+		imageContainer.Rows.Add(row)
+	End Sub
+	Private Sub AddImage(ByVal targetCell As HtmlTableCell, ByVal imageItem As AppointmentImageItem)
+		Dim image As New Image()
+		imageItem.ImageProperties.AssignToControl(image, False)
+		targetCell.Controls.Add(image)
+	End Sub
 
 End Class

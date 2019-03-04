@@ -45,19 +45,19 @@
                         <td runat="server" id="startTimeClockContainer"> 
                         </td>
                         <td>
-                            <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblStartTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Visible%>'></dxe:ASPxLabel>            
+							<dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblStartTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Visible%>'></dxe:ASPxLabel>            
                         </td>
                         <td runat="server" id="endTimeClockContainer">
                         </td>
                         <td>
-                            <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblEndTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Visible%>'></dxe:ASPxLabel>
+							<dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblEndTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Visible%>'></dxe:ASPxLabel>
                         </td>
                         <td>
                             <table id="imageContainer" runat="server" cellpadding="1" cellspacing="0" style="vertical-align: middle;">                            
                             </table>
                         </td>
                         <td style="width: 100%">
-                            <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblTitle" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.Title.Text%>'> </dxe:ASPxLabel>            
+							<dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblTitle" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.Title.Text%>'> </dxe:ASPxLabel>            
                         </td>
                     </tr>
                 </table>

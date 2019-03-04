@@ -20,9 +20,9 @@
             if (oldText != stringInterval)
                 this.controls.lblInterval.SetText(stringInterval);
         },
-        GetToolTipContent: function(toolTipData) {    
-            var interval = toolTipData.GetInterval();
-            return this.ConvertIntervalToString(interval);
+        GetToolTipContent: function(toolTipData) {	
+	        var interval = toolTipData.GetInterval();
+	        return this.ConvertIntervalToString(interval);
         }
     });
 //--></script>

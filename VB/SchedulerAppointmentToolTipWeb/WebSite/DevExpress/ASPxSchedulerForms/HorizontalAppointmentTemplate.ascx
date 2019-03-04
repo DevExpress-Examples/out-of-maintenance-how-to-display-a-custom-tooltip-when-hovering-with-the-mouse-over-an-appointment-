@@ -43,14 +43,14 @@
             <table cellpadding="0" cellspacing="0" style="width:100%; padding-bottom:2px; padding-top:2px; padding-left:1px; padding-right:1px;">
                 <tr valign="middle" align="left">
                     <td>
-                        <asp:Image runat="server" ID="imgStartContinueArrow" Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartContinueArrow.Visible%>'></asp:Image>
+						<asp:Image runat="server" ID="imgStartContinueArrow" Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartContinueArrow.Visible%>'></asp:Image>
                     </td>
                     <td>
-                        <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblStartContinueText" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartContinueText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartContinueText.Visible%>'> </dxe:ASPxLabel>
+						<dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblStartContinueText" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartContinueText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartContinueText.Visible%>'> </dxe:ASPxLabel>
                     </td>
                     <td runat="server" id="startTimeClockContainer"> </td>
                     <td>
-                       <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblStartTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Visible%>' ></dxe:ASPxLabel>
+					   <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblStartTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.StartTimeText.Visible%>' ></dxe:ASPxLabel>
                     </td>
                     <td style="width: 100%;" align="center">
                         <table cellpadding="1" cellspacing="1" style="vertical-align: middle;">
@@ -60,7 +60,7 @@
                                     </table>
                                 </td>
                                 <td align="center">                            
-                                     <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblTitle" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.Title.Text%>'></dxe:ASPxLabel>
+									 <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblTitle" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.Title.Text%>'></dxe:ASPxLabel>
                                 </td>
                             </tr>
                         </table>
@@ -68,13 +68,13 @@
                     <td runat="server" id="endTimeClockContainer"> 
                     </td>
                     <td>
-                        <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblEndTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Visible%>' ></dxe:ASPxLabel>
+						<dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblEndTime" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndTimeText.Visible%>' ></dxe:ASPxLabel>
                     </td>
                     <td>
-                        <dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblEndContinueText" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndContinueText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndContinueText.Visible%>'></dxe:ASPxLabel>
+						<dxe:ASPxLabel runat="server" EnableViewState="false" EncodeHtml="true" ID="lblEndContinueText" Text='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndContinueText.Text%>' Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndContinueText.Visible%>'></dxe:ASPxLabel>
                     </td>
                     <td>
-                        <asp:Image runat="server" ID="imgEndContinueArrow" Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndContinueArrow.Visible%>'></asp:Image>
+						<asp:Image runat="server" ID="imgEndContinueArrow" Visible='<%#CType(Container, HorizontalAppointmentTemplateContainer).Items.EndContinueArrow.Visible%>'></asp:Image>
                     </td>
                 </tr>
             </table>

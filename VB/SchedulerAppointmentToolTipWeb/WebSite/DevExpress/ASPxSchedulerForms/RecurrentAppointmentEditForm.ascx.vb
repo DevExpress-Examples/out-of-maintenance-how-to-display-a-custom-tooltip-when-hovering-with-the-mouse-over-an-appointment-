@@ -38,26 +38,26 @@ Imports DevExpress.Web.ASPxScheduler
 Imports DevExpress.Web
 
 Partial Public Class RecurrentAppointmentEditForm
-    Inherits SchedulerFormControl
+	Inherits SchedulerFormControl
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-        'PrepareChildControls();
-    End Sub
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+		'PrepareChildControls();
+	End Sub
 
-    Public Overrides Sub DataBind()
-        MyBase.DataBind()
+	Public Overrides Sub DataBind()
+		MyBase.DataBind()
 
-        Dim container As RecurrentAppointmentEditFormTemplateContainer = CType(Parent, RecurrentAppointmentEditFormTemplateContainer)
+		Dim container As RecurrentAppointmentEditFormTemplateContainer = CType(Parent, RecurrentAppointmentEditFormTemplateContainer)
 
-        btnOk.ClientSideEvents.Click = container.ApplyHandler
-        btnCancel.ClientSideEvents.Click = container.CancelHandler
-    End Sub
-    Protected Overrides Function GetChildEditors() As ASPxEditBase()
-        Dim edits() As ASPxEditBase = { lblConfirm, rbAction }
-        Return edits
-    End Function
-    Protected Overrides Function GetChildButtons() As ASPxButton()
-        Dim buttons() As ASPxButton = { btnOk, btnCancel }
-        Return buttons
-    End Function
+		btnOk.ClientSideEvents.Click = container.ApplyHandler
+		btnCancel.ClientSideEvents.Click = container.CancelHandler
+	End Sub
+	Protected Overrides Function GetChildEditors() As ASPxEditBase()
+		Dim edits() As ASPxEditBase = { lblConfirm, rbAction }
+		Return edits
+	End Function
+	Protected Overrides Function GetChildButtons() As ASPxButton()
+		Dim buttons() As ASPxButton = { btnOk, btnCancel }
+		Return buttons
+	End Function
 End Class

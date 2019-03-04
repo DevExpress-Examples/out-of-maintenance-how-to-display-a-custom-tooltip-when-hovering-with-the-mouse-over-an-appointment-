@@ -3,9 +3,9 @@
 <%@ Register assembly="DevExpress.Web.ASPxScheduler.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxScheduler" tagprefix="dxwschs" %>
 <%@ Register assembly="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraScheduler" tagprefix="dx" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title></title>
 </head>
@@ -64,7 +64,6 @@
             </WorkWeekView>
             </Views>
         </dxwschs:ASPxScheduler>
-
 
         <asp:SqlDataSource ID="SqlDataSourceResources" runat="server" 
             ConnectionString="<%$ ConnectionStrings:CarsXtraSchedulingConnectionString %>" 

@@ -58,7 +58,7 @@
                         </dxe:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
-                        <dxe:ASPxTextBox ClientInstanceName="_dx" ID="tbSubject" runat="server" Width="100%" Text='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.Subject%>' />
+						<dxe:ASPxTextBox ClientInstanceName="_dx" ID="tbSubject" runat="server" Width="100%" Text='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.Subject%>' />
                     </td>
                 </tr>
             </table>
@@ -73,7 +73,7 @@
                         </dxe:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
-                        <dxe:ASPxTextBox ClientInstanceName="_dx" ID="tbLocation" runat="server" Width="100%" Text='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.Location%>' />
+						<dxe:ASPxTextBox ClientInstanceName="_dx" ID="tbLocation" runat="server" Width="100%" Text='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.Location%>' />
                     </td>
                 </tr>
             </table>
@@ -86,7 +86,7 @@
                         </dxe:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
-                        <dxe:ASPxComboBox ClientInstanceName="_dx" ID="edtLabel" runat="server" Width="100%" DataSource='<%#CType(Container, AppointmentFormTemplateContainer).LabelDataSource%>' />
+						<dxe:ASPxComboBox ClientInstanceName="_dx" ID="edtLabel" runat="server" Width="100%" DataSource='<%#CType(Container, AppointmentFormTemplateContainer).LabelDataSource%>' />
                     </td>
                 </tr>
             </table>
@@ -101,7 +101,7 @@
                         </dxe:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
-                        <dxe:ASPxDateEdit ClientInstanceName="_dx" ID="edtStartDate" runat="server" Width="100%" Date='<%#CType(Container, AppointmentFormTemplateContainer).Start%>' EditFormat="DateTime" DateOnError="Undo" AllowNull="false" />
+						<dxe:ASPxDateEdit ClientInstanceName="_dx" ID="edtStartDate" runat="server" Width="100%" Date='<%#CType(Container, AppointmentFormTemplateContainer).Start%>' EditFormat="DateTime" DateOnError="Undo" AllowNull="false" />
                     </td>
                 </tr>
             </table>
@@ -113,7 +113,7 @@
                         <dxe:ASPxLabel runat="server" ID="lblEndDate" Text="End time:" Wrap="false" AssociatedControlID="edtEndDate"/>
                     </td>
                     <td class="dxscControlCell">
-                        <dxe:ASPxDateEdit id="edtEndDate" runat="server" Date='<%#CType(Container, AppointmentFormTemplateContainer).End%>'
+						<dxe:ASPxDateEdit id="edtEndDate" runat="server" Date='<%#CType(Container, AppointmentFormTemplateContainer).End%>'
                             EditFormat="DateTime" Width="100%" DateOnError="Undo" AllowNull="false">
                         </dxe:ASPxDateEdit>
                     </td>
@@ -130,7 +130,7 @@
                         </dxe:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
-                        <dxe:ASPxComboBox ClientInstanceName="_dx" ID="edtStatus" runat="server" Width="100%" DataSource='<%#CType(Container, AppointmentFormTemplateContainer).StatusDataSource%>' />
+						<dxe:ASPxComboBox ClientInstanceName="_dx" ID="edtStatus" runat="server" Width="100%" DataSource='<%#CType(Container, AppointmentFormTemplateContainer).StatusDataSource%>' />
                     </td>
                 </tr>
             </table>
@@ -139,7 +139,7 @@
             <table class="dxscLabelControlPair" cellpadding="0" cellspacing="0">
                 <tr>
                     <td style="width: 20px; height: 20px;">
-                        <dxe:ASPxCheckBox ClientInstanceName="_dx" ID="chkAllDay" runat="server" Checked='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.AllDay%>'>
+						<dxe:ASPxCheckBox ClientInstanceName="_dx" ID="chkAllDay" runat="server" Checked='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.AllDay%>'>
                         </dxe:ASPxCheckBox>
                     </td>
                     <td style="padding-left: 2px;">
@@ -171,9 +171,9 @@ End If
 <%
 If ResourceSharing Then
 %>
-                        <dxe:ASPxDropDownEdit id="ddResource" runat="server" Width="100%" ClientInstanceName="ddResource" Enabled='<%#CType(Container, AppointmentFormTemplateContainer).CanEditResource%>' AllowUserInput="false">
+						<dxe:ASPxDropDownEdit id="ddResource" runat="server" Width="100%" ClientInstanceName="ddResource" Enabled='<%#CType(Container, AppointmentFormTemplateContainer).CanEditResource%>' AllowUserInput="false">
                             <DropDownWindowTemplate>
-                                <dxe:ASPxListBox id="edtMultiResource" runat="server" width="100%" SelectionMode="CheckColumn" DataSource='<%#ResourceDataSource%>' Border-BorderWidth="0">
+								<dxe:ASPxListBox id="edtMultiResource" runat="server" width="100%" SelectionMode="CheckColumn" DataSource='<%#ResourceDataSource%>' Border-BorderWidth="0">
                                     <ClientSideEvents SelectedIndexChanged="function(s, e) {
                                         var resourceNames = new Array();
                                         var items = s.GetSelectedItems();
@@ -192,10 +192,12 @@ If ResourceSharing Then
 <%
 Else
 %>
-                        <dxe:ASPxComboBox ClientInstanceName="_dx" ID="edtResource" runat="server" Width="100%" DataSource='<%#ResourceDataSource%> ' Enabled='<%#CType(Container, AppointmentFormTemplateContainer).CanEditResource%>' />
+
+						<dxe:ASPxComboBox ClientInstanceName="_dx" ID="edtResource" runat="server" Width="100%" DataSource='<%#ResourceDataSource%> ' Enabled='<%#CType(Container, AppointmentFormTemplateContainer).CanEditResource%>' />
 <%
 End If
 %>
+
                     </td>
 
                 </tr>
@@ -222,7 +224,7 @@ If CanShowReminders Then
                         </table>
                     </td>
                     <td class="dxscControlCell" style="padding-left: 3px">
-                        <dxe:ASPxComboBox  ID="cbReminder" ClientInstanceName="_dxAppointmentForm_cbReminder" runat="server" Width="100%" DataSource='<%#CType(Container, AppointmentFormTemplateContainer).ReminderDataSource%>' />
+						<dxe:ASPxComboBox  ID="cbReminder" ClientInstanceName="_dxAppointmentForm_cbReminder" runat="server" Width="100%" DataSource='<%#CType(Container, AppointmentFormTemplateContainer).ReminderDataSource%>' />
                     </td>
                 </tr>
             </table>
@@ -233,24 +235,24 @@ End If
     </tr>
     <tr>
         <td class="dxscDoubleCell" colspan="2" style="height: 90px;">
-            <dxe:ASPxMemo ClientInstanceName="_dx" ID="tbDescription" runat="server" Width="100%" Rows="6" Text='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.Description%>' />
+			<dxe:ASPxMemo ClientInstanceName="_dx" ID="tbDescription" runat="server" Width="100%" Rows="6" Text='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.Description%>' />
         </td>
     </tr>
 </table>
 
 <dxsc:AppointmentRecurrenceForm ID="AppointmentRecurrenceForm1" runat="server"
-    IsRecurring='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.IsRecurring%>' 
-    DayNumber='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceDayNumber%>' 
-    End='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceEnd%>' 
-    Month='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceMonth%>' 
-    OccurrenceCount='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceOccurrenceCount%>' 
-    Periodicity='<%#CType(Container, AppointmentFormTemplateContainer).RecurrencePeriodicity%>' 
-    RecurrenceRange='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceRange%>' 
-    Start='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceStart%>' 
-    WeekDays='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceWeekDays%>' 
-    WeekOfMonth='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceWeekOfMonth%>' 
-    RecurrenceType='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceType%>'
-    IsFormRecreated='<%#CType(Container, AppointmentFormTemplateContainer).IsFormRecreated%>' >
+	IsRecurring='<%#CType(Container, AppointmentFormTemplateContainer).Appointment.IsRecurring%>' 
+	DayNumber='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceDayNumber%>' 
+	End='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceEnd%>' 
+	Month='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceMonth%>' 
+	OccurrenceCount='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceOccurrenceCount%>' 
+	Periodicity='<%#CType(Container, AppointmentFormTemplateContainer).RecurrencePeriodicity%>' 
+	RecurrenceRange='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceRange%>' 
+	Start='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceStart%>' 
+	WeekDays='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceWeekDays%>' 
+	WeekOfMonth='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceWeekOfMonth%>' 
+	RecurrenceType='<%#CType(Container, AppointmentFormTemplateContainer).RecurrenceType%>'
+	IsFormRecreated='<%#CType(Container, AppointmentFormTemplateContainer).IsFormRecreated%>' >
 </dxsc:AppointmentRecurrenceForm>
 
 <table cellpadding="0" cellspacing="0" style="width: 100%; height: 35px;">
@@ -269,7 +271,7 @@ End If
                     <td>
                         <dxe:ASPxButton runat="server" ClientInstanceName="_dx" ID="btnDelete" Text="Delete" UseSubmitBehavior="false"
                             AutoPostBack="false" EnableViewState="false" Width="91px"
-                            Enabled='<%#CType(Container, AppointmentFormTemplateContainer).CanDeleteAppointment%>'
+							Enabled='<%#CType(Container, AppointmentFormTemplateContainer).CanDeleteAppointment%>'
                             CausesValidation="False" />
                     </td>
                 </tr>
@@ -280,7 +282,7 @@ End If
 <table cellpadding="0" cellspacing="0" style="width: 100%;">
     <tr>
         <td style="width: 100%;" align="left">
-            <dxsc:ASPxSchedulerStatusInfo runat="server" ID="schedulerStatusInfo" Priority="1" MasterControlId='<%#CType(Container, DevExpress.Web.ASPxScheduler.AppointmentFormTemplateContainer).ControlId%>' />
+			<dxsc:ASPxSchedulerStatusInfo runat="server" ID="schedulerStatusInfo" Priority="1" MasterControlId='<%#CType(Container, DevExpress.Web.ASPxScheduler.AppointmentFormTemplateContainer).ControlId%>' />
         </td>
     </tr>
 </table>

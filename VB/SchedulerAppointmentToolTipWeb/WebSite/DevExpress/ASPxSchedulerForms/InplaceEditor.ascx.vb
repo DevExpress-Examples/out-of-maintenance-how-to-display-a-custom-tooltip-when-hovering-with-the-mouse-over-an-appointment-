@@ -51,31 +51,31 @@ Imports DevExpress.Web
 Imports DevExpress.Web.Internal
 
 Partial Public Class InplaceEditor
-    Inherits InplaceEditorBaseFormControl
+	Inherits InplaceEditorBaseFormControl
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-        'PrepareChildControls();
-        memSubject.Focus()
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+		'PrepareChildControls();
+		memSubject.Focus()
 
-    End Sub
-    Public Overrides Sub DataBind()
-        MyBase.DataBind()
-        Dim container As AppointmentInplaceEditorTemplateContainer = CType(Parent, AppointmentInplaceEditorTemplateContainer)
+	End Sub
+	Public Overrides Sub DataBind()
+		MyBase.DataBind()
+		Dim container As AppointmentInplaceEditorTemplateContainer = CType(Parent, AppointmentInplaceEditorTemplateContainer)
 
-        btnCancel.Image.Assign(container.Control.Images.GetInplaceEditorCancelImage(Page))
-        btnSave.Image.Assign(container.Control.Images.GetInplaceEditorSaveImage(Page))
-        btnEditForm.Image.Assign(container.Control.Images.GetInplaceEditorEditFormImage(Page))
+		btnCancel.Image.Assign(container.Control.Images.GetInplaceEditorCancelImage(Page))
+		btnSave.Image.Assign(container.Control.Images.GetInplaceEditorSaveImage(Page))
+		btnEditForm.Image.Assign(container.Control.Images.GetInplaceEditorEditFormImage(Page))
 
-        btnSave.ClientSideEvents.Click = container.SaveHandler
-        btnCancel.ClientSideEvents.Click = container.CancelHandler
-        btnEditForm.ClientSideEvents.Click = container.EditFormHandler
-    End Sub
-    Protected Overrides Function GetChildEditors() As ASPxEditBase()
-        Dim edits() As ASPxEditBase = { memSubject }
-        Return edits
-    End Function
-    Protected Overrides Function GetChildButtons() As ASPxButton()
-        Dim buttons() As ASPxButton = { btnSave, btnCancel, btnEditForm }
-        Return buttons
-    End Function
+		btnSave.ClientSideEvents.Click = container.SaveHandler
+		btnCancel.ClientSideEvents.Click = container.CancelHandler
+		btnEditForm.ClientSideEvents.Click = container.EditFormHandler
+	End Sub
+	Protected Overrides Function GetChildEditors() As ASPxEditBase()
+		Dim edits() As ASPxEditBase = { memSubject }
+		Return edits
+	End Function
+	Protected Overrides Function GetChildButtons() As ASPxButton()
+		Dim buttons() As ASPxButton = { btnSave, btnCancel, btnEditForm }
+		Return buttons
+	End Function
 End Class

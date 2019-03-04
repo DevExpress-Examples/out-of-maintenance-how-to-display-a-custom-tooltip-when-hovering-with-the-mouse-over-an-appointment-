@@ -39,11 +39,11 @@
 <table style="width:100%; height:100%">
     <tr>
         <td rowspan="2"  style="vertical-align:top;">
-            <dxe:ASPxImage id="Image" runat="server" EnableViewState="False" ImageUrl='<%#Page.ClientScript.GetWebResourceUrl(GetType(ASPxScheduler), "Images.StatusInfo.Info.png")%>' Width="48px" Height="48px" IsPng="true">
+			<dxe:ASPxImage id="Image" runat="server" EnableViewState="False" ImageUrl='<%#Page.ClientScript.GetWebResourceUrl(GetType(ASPxScheduler), "Images.StatusInfo.Info.png")%>' Width="48px" Height="48px" IsPng="true">
             </dxe:ASPxImage>
         </td>
         <td style="width:100%;">
-            <dxe:ASPxLabel ID="lblConfirm" runat="server" Text='<%#"""" & CType(Container, DevExpress.Web.ASPxScheduler.RecurrentAppointmentEditFormTemplateContainer).Appointment.Subject & """ is a recurring appointment. Do you want to open only this occurrence or the series?"%>'/>
+			<dxe:ASPxLabel ID="lblConfirm" runat="server" Text='<%#"""" & CType(Container, DevExpress.Web.ASPxScheduler.RecurrentAppointmentEditFormTemplateContainer).Appointment.Subject & """ is a recurring appointment. Do you want to open only this occurrence or the series?"%>'/>
         </td>
     </tr>
     <tr>

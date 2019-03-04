@@ -42,7 +42,7 @@
             <dxe:ASPxLabel ID="lblDate" runat="server" Text="Date:" AssociatedControlID="edtDate" />
         </td>
         <td style="width:100%">
-            <dxe:ASPxDateEdit ClientInstanceName="_dx" ID="edtDate" runat="server" Width="100%" Date='<%#CType(Container, GotoDateFormTemplateContainer).Date%>' />
+			<dxe:ASPxDateEdit ClientInstanceName="_dx" ID="edtDate" runat="server" Width="100%" Date='<%#CType(Container, GotoDateFormTemplateContainer).Date%>' />
         </td> 
     </tr>
     <tr>
@@ -52,7 +52,7 @@
             </span>
         </td>
         <td style="width:100%">
-            <dxe:ASPxComboBox ClientInstanceName="_dx" ID="cbView" runat="server" Width="100%" DataSource='<%#CType(Container, GotoDateFormTemplateContainer).ViewsDataSource%>'></dxe:ASPxComboBox>
+			<dxe:ASPxComboBox ClientInstanceName="_dx" ID="cbView" runat="server" Width="100%" DataSource='<%#CType(Container, GotoDateFormTemplateContainer).ViewsDataSource%>'></dxe:ASPxComboBox>
         </td>
     </tr>
     <tr>
