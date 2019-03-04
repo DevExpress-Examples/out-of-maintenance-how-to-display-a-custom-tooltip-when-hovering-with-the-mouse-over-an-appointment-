@@ -1,6 +1,6 @@
 <%@ Control Language="vb" AutoEventWireup="true" CodeFile="CustomAppointmentTooltip.ascx.vb"
 	Inherits="UserForms_CustomAppointmentTooltip" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2" Namespace="DevExpress.Web.ASPxEditors"
+<%@ Register Assembly="DevExpress.Web.v13.1" Namespace="DevExpress.Web.ASPxEditors"
 	TagPrefix="dxe" %>
 <link rel="stylesheet" type="text/css" href="CSS/CustomToolTip.css" />
 <div class="cToolTipContainer">
