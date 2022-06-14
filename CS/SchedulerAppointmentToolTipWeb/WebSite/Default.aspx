@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<%@ Register assembly="DevExpress.Web.ASPxScheduler.v18.2, Version=18.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxScheduler" tagprefix="dxwschs" %>
-<%@ Register assembly="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraScheduler" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxScheduler.v18.2, Version=18.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxScheduler" tagprefix="dxwschs" %>
+<%@ Register assembly="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraScheduler" tagprefix="dx" %>
 
 <!DOCTYPE html>
 
