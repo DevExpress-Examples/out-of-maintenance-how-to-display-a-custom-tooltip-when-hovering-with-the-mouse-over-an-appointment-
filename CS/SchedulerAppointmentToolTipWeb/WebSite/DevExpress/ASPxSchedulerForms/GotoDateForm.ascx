@@ -32,8 +32,8 @@
 --%>
 
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="GotoDateForm" CodeFile="GotoDateForm.ascx.cs" %>
-<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v18.2, Version=18.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler" TagPrefix="dxwschs" %>
-<%@ Register Assembly="DevExpress.Web.v18.2, Version=18.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web"
+<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v18.2, Version=18.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler" TagPrefix="dxwschs" %>
+<%@ Register Assembly="DevExpress.Web.v18.2, Version=18.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web"
     TagPrefix="dxe" %>
     
 <table style="width:100%; height:100%">
